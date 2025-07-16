@@ -2,6 +2,12 @@ resource "azurerm_resource_group" "terra" {
   name     = "terra"
   location = "East US"
 } 
+
+resource "azurerm_resource_group" "storeterra" {
+    name     = "example-resources"
+    location = "East US"
+}
+
 resource "azurerm_storage_account" "saterra" {
     name                     = "storagecn05"
     resource_group_name      = azurerm_resource_group.storeterra.name
